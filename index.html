@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <style type="text/css">
+        html, body {
+            margin: auto;
+        }
+        .split {
+            background-size: 200%;
+            width: 50%;
+            height: 100vh;
+        }
+        .glass {
+            background-color: white;
+            color: black;
+            opacity: .65;
+        }
+        .dark {
+            background-color: black;
+            color: white;
+            opacity: .65;
+        }
+        #luckynumber-section {
+            background-image: url(https://tinyurl.com/lmfy6jr);
+            background-position: left;
+            float: left;
+        }
+        #millionaire-section {
+            background-image: url(https://tinyurl.com/mcac5ku);
+            background-color: black;
+            background-position: right;
+            float: right;
+        }
+        #dev-section img {
+            float: right;
+        }
+        .clear {
+            clear: both;
+        }
+        #creative, #logic {
+            text-align: center;
+            margin-top: 200px;
+            font-size: 4em;
+        }
+        #creative {
+            font-family: 'Pacifico', monospace;
+            /*color: #c48cff;*/
+        }
+        #logic {
+            color: #79abff;
+            background-color: black;
+            font-family: 'Roboto Mono', monospace;
+        }
+        #amp {
+            position: absolute;
+            top: 150px;
+            margin-left: 45%;
+            font-size: 10em;
+            font-family: sans-serif;
+            z-index: 5;
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="luckynumber-section" class="split glass">
+        <h1 id="creative"><a href="luckynumber.html">Lucky Number</a></h1>
+    </div>
+    <div id="amp">&</div>
+    <div id="millionaire-section" class="split dark">
+        <h1 id="logic"><a href="millionaire.html">Who is millionaire</a></h1>
+    </div>
+    <div class="clear"></div>
+    <script type="text/javascript">
+        $('#luckynumber-section').hover(function(){
+            $(this).toggleClass('glass', 'medium');
+            $('#creative').css("color", "#c48cff");
+
+        }).click(function () {
+            window.location.href='luckynumber.html'
+        });
+        $('#millionaire-section').hover(function(){
+            $(this).toggleClass('dark', 'medium');
+        }).click(function () {
+            window.location.href='millionaire.html'
+        });
+    </script>
+</body>
+</html>

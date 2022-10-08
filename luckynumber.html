@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <title>Vòng quay may mắn</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <script type="text/javascript" src="js/Winwheel.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div align="center">
+    <span onclick="goBack()">Home Page</span>
+    <h1>Vòng quay may mắn</p></h1>
+    <p>Cuối giờ học các bạn học sinh sẽ có cơ hội quay thưởng để trúng nhiều phần quà có giá trị</p>
+    <br/>
+    <p>Chúc may mắn ! Kiếm nhiều coins để đổi nhiều phần quà hấp dẫn !
+    <br/>
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td>
+                <div class="power_controls">
+                     <table class="power" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <td>Con số may mắn</td>
+                            <td><input type="text" id="nameStudent" onkeydown="Javascript: if (event.keyCode==13) addSegment();"></td>
+                            <td>
+                            </td>
+                        </tr>
+                         <tr>
+                             <td> <img id="spin_button" src="resources/spin_off.png" alt="Spin" onClick="startSpin();"/></td>
+<!--                             <td><a href="#" onClick="resetWheel(); return false;">Chơi lại</a><br/></td>-->
+                             <td><a href="#" onClick="resetStudents(); return false;">Khởi tạo lại</a><br/></td>
+                         </tr>
+                    </table>
+                </div>
+            </td>
+            <td width="438" height="582" class="the_wheel" align="center" valign="center" id="circle">
+                <canvas id="canvas" width="434" height="434">
+                    <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try
+                        another.</p>
+                </canvas>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+<!--        <div class="close-btn" onclick="togglePopup()">&times;</div>-->
+        <h1>Con số may mắn là :</h1>
+        <h1 id="phanthuong"></h1>
+    </div>
+</div>
+<script type="text/javascript" src="js/luckynumber.js"></script>
+</body>
+</html>
